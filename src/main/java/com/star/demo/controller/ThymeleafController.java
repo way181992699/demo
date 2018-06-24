@@ -57,16 +57,16 @@ public class ThymeleafController {
 	}
 
 	@RequestMapping("/star")
-	public String star(ModelMap map,User u) {
-//		User u = new User();
-//		u.setName("Seven");
-//		u.setAge(29);
+	public String star(ModelMap map) {
+		User u = new User();
+		u.setName("seven");
+		u.setAge(18);
 		u.setBirthday(new Date());
 		u.setPassword("321");
-//		u.setDesc("<div style='color:green'><b>再次描述<b/></div>");
-		u.setName(u.getName());
-		u.setAge(u.getAge());
-		u.setDesc(u.getDesc());
+		u.setDesc("<div style='color:green'><b>再次描述<b/></div>");
+//		u.setName(u.getName());
+//		u.setAge(u.getAge());
+//		u.setDesc(u.getDesc());
 		map.addAttribute("user", u);
 		return "thymeleaf/star";
 	}

@@ -21,27 +21,36 @@
 	</div>
 	</br>
 	<div th:object="${user}">
-		<span>text and utext:</span> </br> <span th:text="*{desc}"></span> </br> <span
-			th:utext="*{desc}"></span>
+		<div>text and utext:</div>
+		</br>
+		<div th:text="*{desc}"></div>
+		</br>
+		<div th:utext="*{desc}"></div>
 	</div>
 	</br>
-	<span>URL: </span>
+	<div>URL:</div>
 	</br>
 	<a href="" th:href="@{http://www.baidu.com}">百度搜索</a>
 	<a href="" th:href="@{http://www.imooc.com}">网站地址</a>
 	</br>
-<form th:action="@{/th/star}"  th:object="${user}" th:method="post">
-		姓名：<input type="text"  th:field="*{name}" /> </br>
-		年龄：<input type="text"  th:field="*{age}" /> </br>
-		描述：<input type="text"  th:field="*{desc}" /> </br>
-		<input type="submit">
-		</br>
+	<form th:action="@{/th/star}" th:object="${user}" th:method="post">
+		姓名：<input type="text" th:field="*{name}" /> </br> 年龄：<input type="text"
+			th:field="*{age}" /> </br> 描述：<input type="text" th:field="*{desc}" /> </br>
+		<input type="submit"> </br>
 	</form>
-</br>
-<!-- <span th:if="${user.age}==18">成年礼18岁</span>
-<span th:if="${user.age} gt 18">>18岁</span>
-<span th:if="${user.age} lt 18">小于18岁</span>
-<span th:if="${user.age} ge18">>=18岁</span>
-<span th:if="${user.age} le 18">小于等于18岁</span> -->
+	</br>
+	<div th:if="${user.age} == 18">成年礼18岁</div>
+	<div th:if="${user.age}  gt 18">大于18岁</div>
+	<div th:if="${user.age}  lt 18">小于18岁</div>
+ 	<div th:if="${user.age}  ge 18">大于等于18岁</div>
+	<div th:if="${user.age}  le 18">小于等于18岁</div>
+	</br>
+<select>
+<option th:selected="${user.name} eq star ">star</option>
+<option th:selected="${user.name} eq Seven ">Seven</option>
+<option th:selected="${user.name} eq seven ">seven</option>
+<option th:selected="${user.name} eq eight ">eight</option>
+</select>
+	
 </body>
 </html>
