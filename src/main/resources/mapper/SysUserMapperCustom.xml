@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.star.demo.mapper.SysUserMapperCustom" >
+  <!-- <select id="queryAll"   resultType="com.star.demo.pojo.SysUser"  parameterType="java.lang.String">
+  select * from sys_user where job =#{job} and age=#{age}
+  </select> -->
+  <select id="queryAll"   resultType="com.star.demo.pojo.SysUser"  parameterType="com.star.demo.pojo.SysUser">
+  select * from sys_user where job =#{job} and age=#{age} and sex=#{sex}
+  </select>
+</mapper>

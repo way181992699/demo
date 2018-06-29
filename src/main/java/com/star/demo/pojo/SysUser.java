@@ -5,9 +5,8 @@ import javax.persistence.*;
 @Table(name = "sys_user")
 public class SysUser {
     @Id
-    private Integer id;
+    private String id;
 
-    @Column(name = "userName")
     private String username;
 
     private String password;
@@ -16,24 +15,24 @@ public class SysUser {
 
     private String sex;
 
-    private String desc;
+    private String job;
 
     /**
      * @return id
      */
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
     /**
      * @param id
      */
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
     /**
-     * @return userName
+     * @return username
      */
     public String getUsername() {
         return username;
@@ -89,16 +88,16 @@ public class SysUser {
     }
 
     /**
-     * @return desc
+     * @return job
      */
-    public String getDesc() {
-        return desc;
+    public String getJob() {
+        return job;
     }
 
     /**
-     * @param desc
+     * @param job
      */
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setJob(String job) {
+        this.job = job;
     }
 }

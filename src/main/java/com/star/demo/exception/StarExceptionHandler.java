@@ -31,12 +31,12 @@ public class StarExceptionHandler {
     		HttpServletResponse response, Exception e) throws Exception {
     	
     	e.printStackTrace();
-    	System.out.println("a");
+   
     	if (isAjax(reqest)) {
-    		System.out.println("b");
+    	
     		return JSONResult.errorException(e.getMessage());
     	} else {
-    		System.out.println("c");
+    	
     		ModelAndView mav = new ModelAndView();
             mav.addObject("exception", e);
             mav.addObject("url", reqest.getRequestURL());
