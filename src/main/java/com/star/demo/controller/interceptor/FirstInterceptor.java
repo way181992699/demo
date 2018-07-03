@@ -14,7 +14,7 @@ import com.star.demo.pojo.JSONResult;
 
 import com.star.demo.utils.JsonUtils;
 
-public class FristInterceptor implements HandlerInterceptor{
+public class FirstInterceptor implements HandlerInterceptor{
 
 	/**
 	 * 在请求处理之前进行调用（Controller方法调用之前）

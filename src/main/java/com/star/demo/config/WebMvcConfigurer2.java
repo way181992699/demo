@@ -3,7 +3,7 @@ package com.star.demo.config;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import com.star.demo.controller.interceptor.FristInterceptor;
+import com.star.demo.controller.interceptor.FirstInterceptor;
 
 /***
  * 在SpringBoot2.0及Spring 5.0 WebMvcConfigurerAdapter已被废弃，目前找到解决方案就有两种:
@@ -17,7 +17,7 @@ public class WebMvcConfigurer2 implements WebMvcConfigurer {
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(new FristInterceptor()).addPathPatterns("/*/**");
+		registry.addInterceptor(new FirstInterceptor()).addPathPatterns("/*/**");
 		WebMvcConfigurer.super.addInterceptors(registry);
 	}
 
